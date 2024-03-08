@@ -5,7 +5,7 @@ export function HomeAdmin() {
   
   return (
     <div>
-        <h1>Home Admin</h1>
+        <h1>Wicho gay</h1>
     </div>
   );
 }
