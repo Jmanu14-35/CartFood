@@ -41,8 +41,10 @@ INSTALLED_APPS = [
     'rest_framework',
     'drf_yasg',
     "corsheaders",
+    'django_filters',
     'users',
-    'categories'
+    'categories',
+    'products',
     
 ]
 
