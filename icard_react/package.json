@@ -12,7 +12,7 @@
     "react-dom": "^18.2.0",
     "react-dropzone": "^14.2.3",
     "react-router-dom": "5",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
     "react-toastify": "^10.0.4",
     "sass": "^1.71.1",
     "semantic-ui-css": "^2.5.0",
