@@ -26,7 +26,7 @@ export function TableProductAdmin(props) {
               <Image src={product.image} />
             </Table.Cell>
             <Table.Cell>{product.title}</Table.Cell>
-            <Table.Cell>{product.price} Q</Table.Cell>
+            <Table.Cell>Q {product.price} </Table.Cell>
             <Table.Cell>{product.category_data.title}</Table.Cell>
             <Table.Cell className="status">
               {product.active ? <Icon name="check" /> : <Icon name="close" />}
