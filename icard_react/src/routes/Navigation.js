@@ -1,31 +1,25 @@
-import React from 'react';
-import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
-import {map} from "lodash";
-import routes from './routes';
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { map } from "lodash";
+import routes from "./routes";
 
-
-console.log(routes);
-
-export  function Navigation() {
+export function Navigation() {
   return (
     <Router>
-        <Switch>
-          {map(routes, (route, index) => (
-            <Route
-              key={index}
-              path={route.path}
-              exact={route.exact}
-              render={(props) => (
-                <route.layout>
-                  <route.component {...props} />
-                </route.layout>
-              )}
-            />
-
-          ))}
-        </Switch>
+      <Switch>
+        {map(routes, (route, index) => (
+          <Route
+            key={index}
+            path={route.path}
+            exact={route.exact}
+            render={(props) => (
+              <route.layout>
+                <route.component {...props} />
+              </route.layout>
+            )}
+          />
+        ))}
+      </Switch>
     </Router>
-        
-    
-  )
+  );
 }

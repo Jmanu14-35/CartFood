@@ -1,1 +1,1 @@
-export * from "./TableProductAdmin"
+export * from "./TableProductAdmin";

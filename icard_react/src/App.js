@@ -1,16 +1,15 @@
-import React from 'react';
-import {ToastContainer} from "react-toastify";
-import {Navigation} from "./routes";
-import {AuthProvaider} from "./context";
-
-
+import React from "react";
+import { ToastContainer } from "react-toastify";
+import { Navigation } from "./routes";
+import { AuthProvider } from "./context";
 
 export default function App() {
   return (
-    <AuthProvaider>
-      <Navigation/>
+    <AuthProvider>
+      <Navigation />
+
       <ToastContainer
-        position='bottom-center'
+        position="bottom-center"
         autoClose={5000}
         hideProgressBar
         newestOnTop
@@ -20,6 +19,6 @@ export default function App() {
         draggable
         pauseOnHover={false}
       />
-   </AuthProvaider>
-  )
+    </AuthProvider>
+  );
 }

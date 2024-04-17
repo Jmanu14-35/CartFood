@@ -1,2 +1,2 @@
 export * from "./TableCategoryAdmin";
-export * from "./AddEditCAtegoryForm";
+export * from "./AddEditCategoryForm";

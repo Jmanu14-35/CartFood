@@ -1,71 +1,52 @@
-import React , {useState,createContext, useEffect} from "react";
-import {setToken, getToken, removeToken} from "../api/token";
-import {useUser} from "../hooks";
-
+import React, { useState, useEffect, createContext } from "react";
+import { setToken, getToken, removeToken } from "../api/token";
+import { useUser } from "../hooks";
 
 export const AuthContext = createContext({
-    auth: undefined,
-    login: () => null,
-    logout: () => null
+  auth: undefined,
+  login: () => null,
+  logout: () => null,
 });
 
-//Funcion de Autorizacion de Login y reidireccionamiento de pagina Admin.
-export function AuthProvaider(props){
-    const{children} = props;
+export function AuthProvider(props) {
+  const { children } = props;
+  const [auth, setAuth] = useState(undefined);
+  const { getMe } = useUser();
 
-    const [auth, setAuth] = useState(undefined);
+  useEffect(() => {
+    (async () => {
+      const token = getToken();
+      if (token) {
+        const me = await getMe(token);
+        setAuth({ token, me });
+      } else {
+        setAuth(null);
+      }
+    })();
+  }, []);
 
-    const{getME}=useUser();
+  const login = async (token) => {
+    setToken(token);
+    const me = await getMe(token);
+    setAuth({ token, me });
+  };
 
-    //Recuperar llave de token al momento de refrescar pagina.
-    useEffect(() => {
-      (async () => {
-        const token = getToken();
+  const logout = () => {
+    if (auth) {
+      removeToken();
+      setAuth(null);
+    }
+  };
 
-        if (token) {
-            const me = await getME(token);
-            setAuth({token, me});
-            console.log(me);
-        } else {
-            setAuth(null);
-        }
+  const valueContext = {
+    auth,
+    login,
+    logout,
+  };
 
-        console.log(token);
-      })();
-    }, []);
-    
+  if (auth === undefined) return null;
 
-
-
-    const login = async(token) => {
-        setToken(token);
-        const me = await getME(token);
-        setAuth({token, me});
-        //console.log(me);
-        //console.log('Context Login --->', token);
-    };
-
-
-    const logout = () => {
-        if (auth){
-            removeToken();
-            setAuth(null);
-        }
-    };
-
-    //Validar inicio de Sesion o Cierre de Sesion.
-    const valueContext = {
-        auth,
-        login,
-        logout,
-    };
-
-
-    if (auth=== undefined) return null;
-
-
-    return (
-        <AuthContext.Provider value={valueContext}> {children}</AuthContext.Provider>
-    );
-
+  return (
+    <AuthContext.Provider value={valueContext}>{children}</AuthContext.Provider>
+  );
 }
