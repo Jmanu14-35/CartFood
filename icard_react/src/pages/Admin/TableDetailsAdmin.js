@@ -2,12 +2,12 @@ import React, { useState, useEffect } from "react";
 import { Loader } from "semantic-ui-react";
 import { useParams } from "react-router-dom";
 import { forEach, size } from "lodash";
-import { HeaderPage, AddOrderForm } from "../../components/Admin";
-import { ModalBasic } from "../../components/Common";
+import { HeaderPage, AddOrderForm } from "../../components2/Admin";
+import { ModalBasic } from "../../components2/Common";
 import {
   ListOrderAdmin,
   PaymentDetail,
-} from "../../components/Admin/TableDetails";
+} from "../../components2/Admin/TableDetails";
 import { useOrder, useTable, usePayment } from "../../hooks";
 
 export function TableDetailsAdmin() {

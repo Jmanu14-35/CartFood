@@ -4,8 +4,8 @@ import {
   HeaderPage,
   TableCategoryAdmin,
   AddEditCategoryForm,
-} from "../../components/Admin";
-import { ModalBasic } from "../../components/Common";
+} from "../../components2/Admin";
+import { ModalBasic } from "../../components2/Common";
 import { useCategory } from "../../hooks";
 
 export function CategoriesAdmin() {

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Loader } from "semantic-ui-react";
-import { HeaderPage, TablePayments } from "../../components/Admin";
+import { HeaderPage, TablePayments } from "../../components2/Admin";
 import { usePayment } from "../../hooks";
 
 export function PaymentsHistory() {

@@ -4,8 +4,8 @@ import {
   HeaderPage,
   TableProductAdmin,
   AddEditProductForm,
-} from "../../components/Admin";
-import { ModalBasic } from "../../components/Common";
+} from "../../components2/Admin";
+import { ModalBasic } from "../../components2/Common";
 import { useProduct } from "../../hooks";
 
 export function ProductAdmin() {

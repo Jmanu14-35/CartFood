@@ -4,8 +4,8 @@ import {
   HeaderPage,
   TableTablesAdmin,
   AddEditTableForm,
-} from "../../components/Admin";
-import { ModalBasic } from "../../components/Common";
+} from "../../components2/Admin";
+import { ModalBasic } from "../../components2/Common";
 import { useTable } from "../../hooks";
 
 export function TablesAdmin() {

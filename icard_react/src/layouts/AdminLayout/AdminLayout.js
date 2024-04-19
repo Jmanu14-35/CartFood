@@ -1,6 +1,6 @@
 import React from "react";
 import { LoginAdmin } from "../../pages/Admin";
-import { TopMenu, SideMenu } from "../../components/Admin";
+import { TopMenu, SideMenu } from "../../components2/Admin";
 import { useAuth } from "../../hooks";
 import "./AdminLayout.scss";
 

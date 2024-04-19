@@ -1,5 +1,5 @@
 import React from "react";
-import { LoginForm } from "../../../components/Admin";
+import { LoginForm } from "../../../components2/Admin";
 import "./LoginAdmin.scss";
 
 export function LoginAdmin() {
