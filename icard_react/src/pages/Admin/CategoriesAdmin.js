@@ -15,7 +15,7 @@ export function CategoriesAdmin() {
   const [refetch, setRefetch] = useState(false);
   const { loading, categories, getCategories, deleteCategory } = useCategory();
 
-  useEffect(() => getCategories(), [refetch]);
+  useEffect(() => {getCategories()}, [refetch]);
 
   const openCloseModal = () => setShowModal((prev) => !prev);
   const onRefetch = () => setRefetch((prev) => !prev);

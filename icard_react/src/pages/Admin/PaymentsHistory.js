@@ -6,7 +6,7 @@ import { usePayment } from "../../hooks";
 export function PaymentsHistory() {
   const { loading, payments, getPayments } = usePayment();
 
-  useEffect(() => getPayments(), []);
+  useEffect(() => {getPayments()}, []);
 
   return (
     <>

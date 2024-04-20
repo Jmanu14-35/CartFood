@@ -16,7 +16,7 @@ export function AddEditProductForm(props) {
   const { categories, getCategories } = useCategory();
   const { addProduct, updateProduct } = useProduct();
 
-  useEffect(() => getCategories(), []);
+  useEffect(() => {getCategories()}, []);
   useEffect(() => {
     setCategoriesFormat(formatDropdownData(categories));
   }, [categories]);

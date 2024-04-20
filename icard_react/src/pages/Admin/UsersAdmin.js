@@ -15,7 +15,7 @@ export function UsersAdmin() {
   const [refetch, setRefetch] = useState(false);
   const { loading, users, getUsers, deleteUser } = useUser();
 
-  useEffect(() => getUsers(), [refetch]);
+  useEffect(() => {getUsers()}, [refetch]);
 
   const openCloseModal = () => setShowModal((prev) => !prev);
   const onRefetch = () => setRefetch((prev) => !prev);

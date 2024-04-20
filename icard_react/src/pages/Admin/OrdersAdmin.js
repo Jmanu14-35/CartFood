@@ -6,7 +6,7 @@ import { useTable } from "../../hooks";
 export function OrdersAdmin() {
   const { loading, tables, getTables } = useTable();
 
-  useEffect(() => getTables(), []);
+  useEffect(() => {getTables()}, []);
 
   return (
     <>

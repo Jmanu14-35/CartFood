@@ -45,7 +45,7 @@ export function TablePayments(props) {
             <Table.Row key={index}>
               <Table.Cell>{payment.id}</Table.Cell>
               <Table.Cell>{payment.table_data.number}</Table.Cell>
-              <Table.Cell>{payment.totalPayment} €</Table.Cell>
+              <Table.Cell>Q {payment.totalPayment} </Table.Cell>
               <Table.Cell>
                 <Icon name={getIconPaymentName(payment.paymentType)} />
               </Table.Cell>
