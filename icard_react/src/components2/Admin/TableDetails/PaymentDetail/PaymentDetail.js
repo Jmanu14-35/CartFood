@@ -38,7 +38,7 @@ export function PaymentDetail(props) {
           </Table.Row>
           <Table.Row>
             <Table.Cell>Total:</Table.Cell>
-            <Table.Cell>{payment.totalPayment} €</Table.Cell>
+            <Table.Cell>Q {payment.totalPayment}</Table.Cell>
           </Table.Row>
           <Table.Row>
             <Table.Cell>Forma de pago:</Table.Cell>

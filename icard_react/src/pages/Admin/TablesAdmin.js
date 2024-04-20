@@ -15,7 +15,7 @@ export function TablesAdmin() {
   const [refetch, setRefetch] = useState(false);
   const { loading, tables, getTables, deleteTable } = useTable();
 
-  useEffect(() => getTables(), [refetch]);
+  useEffect(() => {getTables()}, [refetch]);
 
   const openCloseModal = () => setShowModal((prev) => !prev);
   const onRefetch = () => setRefetch((prev) => !prev);

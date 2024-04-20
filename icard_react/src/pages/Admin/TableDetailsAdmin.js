@@ -24,7 +24,7 @@ export function TableDetailsAdmin() {
     getOrdersByTable(id, "", "ordering=-status,created_at");
   }, [id, reloadOrders]);
 
-  useEffect(() => getTable(id), [id]);
+  useEffect(() => {getTable(id)}, [id]);
 
   useEffect(() => {
     (async () => {
