@@ -5,7 +5,7 @@ import { ListCategories } from "../../components2/Client";
 export function Categories() {
   const { loading, categories, getCategories } = useCategory();
 
-  useEffect(() => getCategories(), []);
+  useEffect(() => { getCategories() }, []);
 
   return (
     <div>

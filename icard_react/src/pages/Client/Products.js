@@ -7,7 +7,7 @@ export function Products() {
   const { tableNumber, idCategory } = useParams();
   const { loading, products, getProductsByCategory } = useProduct();
 
-  useEffect(() => getProductsByCategory(idCategory), [idCategory]);
+  useEffect(() => { getProductsByCategory(idCategory) }, [idCategory]);
 
   return (
     <div>

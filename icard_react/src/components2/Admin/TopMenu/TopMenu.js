@@ -16,7 +16,7 @@ export function TopMenu() {
   return (
     <Menu fixed="top" className="top-menu-admin">
       <Menu.Item className="top-menu-admin__logo">
-        <p>iCard Admin</p>
+        <p>CartFood Admin</p>
       </Menu.Item>
 
       <Menu.Menu position="right">

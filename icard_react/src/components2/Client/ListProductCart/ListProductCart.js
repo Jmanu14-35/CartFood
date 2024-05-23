@@ -47,13 +47,13 @@ export function ListProductCart(props) {
             <Image src={product.image} avatar />
             <span>{product.title}</span>
           </div>
-          <span>{product.price} €</span>
+          <span>Q{product.price}</span>
           <Icon name="close" onClick={() => removeProduct(index)} />
         </div>
       ))}
 
       <Button primary fluid onClick={createOrder}>
-        Realizar pedido ({total} €)
+        Realizar pedido (Q{total})
       </Button>
     </div>
   );
