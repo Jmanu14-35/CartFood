@@ -28,7 +28,7 @@ export function SelectTable(props) {
 
         <Form onSubmit={onSubmit}>
           <Form.Input
-            placeholder="Ejemplo: 135, 873, 904, 337"
+            placeholder="Ejemplo: 1, 2, 3"
             type="number"
             onChange={(_, data) => setTableNum(data.value)}
           />

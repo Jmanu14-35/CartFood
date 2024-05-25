@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=C:\Users\javalos\Desktop\CartFood\CartFood\icard_django\.venv
+set VIRTUAL_ENV=C:\Users\Jaivalos\Desktop\proyectoSistemas2\CartFood\icard_django\.venv
 
 if not defined PROMPT set PROMPT=$P$G
 

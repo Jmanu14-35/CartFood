@@ -21,6 +21,9 @@ export function ListProducts(props) {
             <Image src={product.image} />
             <span>{product.title}</span>
           </div>
+          <div>
+            <span>Q{product.price}</span>
+          </div>
           <Button primary icon onClick={() => addCart(product)}>
             <Icon name="add" />
           </Button>
