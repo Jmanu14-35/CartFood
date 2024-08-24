@@ -1,0 +1,13 @@
+.login-form-admin {
+
+  .ui.button.primary {
+    margin-top: 20px;
+    background-color: #060606;
+    transition-duration: 0.5s;
+  }
+  .ui.button.primary:hover{
+    transition-duration: 0.5s;
+    background-color: #eac102;
+    color: #060606; 
+  }
+}

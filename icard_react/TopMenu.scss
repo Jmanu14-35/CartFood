@@ -1,0 +1,17 @@
+.top-menu-admin {
+  &__logo {
+    align-items: center;
+    width: 250px;
+    background-color: #060606 !important;
+  }
+
+  i.icon {
+    margin: 0 !important;
+  }
+}
+
+.top-menu-admin__logo img {
+  width: 250px;  // Ajusta el ancho según tus necesidades
+  height: auto; // Mantiene la proporción de la imagen
+  margin-left: 800px;
+}

@@ -1,0 +1,20 @@
+.admin-layout {
+  background-color: #060606 !important;
+  background-image: linear-gradient(300deg, #eac102 0%, #060606 55%);
+  color: white;
+  width: 100%;
+  display: grid;
+  grid: 55px / 1fr;
+  grid-template-areas:
+    "menu"
+    "content";
+  min-height: 100vh;
+
+  &__menu {
+    grid-area: menu;
+  }
+
+  &__main-content {
+    grid-area: content;
+  }
+}
